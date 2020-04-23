@@ -5,6 +5,9 @@ import { LocationProvider } from "./locations/LocationProvider"
 import { ProductProvider } from "./products/ProductProvider"
 import ProductList from "./products/ProductList"
 import { ProductTypeProvider } from "./products/ProductTypeProvider"
+import { EmployeeProvider } from "./employees/EmployeeProvider"
+import EmployeeList from "./employees/EmployeeList"
+import EmployeeForm from "./employees/EmployeeForm"
 
 export default () => (
     <>
@@ -16,15 +19,17 @@ export default () => (
             <div>500 Puppy Way</div>
         </address>
         <article>
-        
-            <LocationProvider>
-                <ProductProvider>
-                    <ProductTypeProvider>
-                        <LocationList />
-                        <ProductList />
-                    </ProductTypeProvider>
-                </ProductProvider>
-            </LocationProvider>
+            <EmployeeProvider>
+                <LocationProvider>
+                    <ProductProvider>
+                        <ProductTypeProvider>
+                            <LocationList />
+                            <ProductList />
+                            <EmployeeList />
+                        </ProductTypeProvider>
+                    </ProductProvider>
+                </LocationProvider>
+            </EmployeeProvider>
         
         </article>
     </>
